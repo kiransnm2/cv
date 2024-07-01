@@ -1,0 +1,477 @@
+<div class="border">
+<div class="container-fluid" id="surgeonIntakeForm">
+  <div class="row px-1">
+<div class="col-md-3 mt-1 p-1 border image-marker-container__box__contents list-scroll" id="table-scroll">
+  <div class="" *ngIf="ArrayListOfImagFront.length > 0">
+      <div *ngFor="let data of ArrayListOfImagFront" class="image-marker__text-box p-1"  style="border-right:5px solid #0f6496;background:#bbe1ed">
+
+          <div class="d-flex">
+              <input type="text" #title  class="border-0 form-control form-control-sm f-13 bold mb-0 pb-0 pr-5" style="background:#bbe1ed" value="{{data?.title}}">
+              <span class="close-style pointer f-14"  (click)="closeselectedpart(data,'Front')" style="margin-left: -20px;">{{data?.close}}</span>
+          </div>
+          <div class="shadow-div">
+            <p #description class="image-marker__text-box__content shdw f-14 border-0" data-placeholder="Insert description here...." style="background: #bbe1ed; border-radius: 4px; line-height: 18px;padding: 4px 10px;" contenteditable="true">{{data?.description}}
+            </p>
+              <!-- <input type="text"  #description  class="border-0 form-control form-control-sm f-13 image-marker__text-box__content" placeholder="Insert description here...." style="background:#bbe1ed" value="{{data?.description}}"  > -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-md-6"  id="BodyPart">
+  <div  class="border my-1 body-width text-center" >
+      <!-- <div id="divFrontBody" style="display: inline-block; width: 250px;"  > -->
+      <div id="divFrontBody" style="display: inline-block; width: 250px;"  >
+        <p style="margin: 0; text-align: center; font-size: 9px; font-family: verdana; font-weight: 600; color: #0f6496;" >FRONT</p>
+          <svg id="front-body" data-name="front-body" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 700">
+              <defs>
+                  <style>
+                      .body-part {
+                          fill: none !important;
+                          stroke: #0f6496 !important;
+                          stroke-miterlimit: 10 !important;
+                      }
+
+                      .body-part2 {
+                          fill: #0f6496 !important;
+                      }
+
+                      .fill-hover {
+                          fill: #0f6496 !important;
+                          fill-opacity: 0;
+                          stroke: rgb(15, 100, 150);
+                          stroke-opacity: 1;
+                          cursor: pointer;
+                      }
+
+                          .fill-hover:hover {
+                              fill-opacity: .4;
+                          }
+                          .selected{
+                            fill: #0f6496 !important;
+                          }
+                  </style>
+              </defs>
+              <polygon class="body-part no-fill-stroke" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;" points="227.77 128.03 227.76 128.03 227.77 128.03 227.77 128.03"></polygon>
+
+              <a id="lnkAntCervicali"  xlink:title="Anterior cervicalbbbbbbb" class="frontBodyClass" >
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;" d="M98.23,127.75V128c1.09-.21,1.74-.28,1.74-.28Z"></path>
+              </a>
+
+              <a id="lnkAntCervicaliii"  xlink:title="Anterior cervicalbbbbbbb" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M161.61,379.64l2.65,0a4.85,4.85,0,0,0-2.65,0Z"></path>
+              </a>
+
+              <a id="lnkAntCervical"  xlink:title="Anterior cervical" xlink:data="R" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                  style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M189.39,113.45H136.65A30.32,30.32,0,0,0,142.59,93h.27c4.06,4.89,10.36,8.7,20.16,8.81,9.8-.11,16.1-3.92,20.14-8.81h.29A30.32,30.32,0,0,0,189.39,113.45Z" ></path>
+              </a>
+
+              <a id="lnkRAntTrapezius" xlink:title="Anterior trapezius (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                  style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M136.64,113.45v14.3H100C120.33,127.37,131,120.78,136.64,113.45Z"></path>
+              </a>
+
+              <a id="lnkLAntTrapezius" xlink:title="Anterior trapezius (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                   style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M227.76,128H189.37V113.45c5.6,7.33,16.31,13.92,36.67,14.3C226,127.75,226.68,127.83,227.76,128Z"></path>
+              </a>
+
+              <a id="lnkAbdomenULquadrant"  xlink:title="Abdomen upper left quadrant"  class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                  style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163,240.83a101.54,101.54,0,0,1,53.46,14.29v35.21H163.18Z"></path>
+              </a>
+
+              <a id="lnkAbdomenURquadrant"  xlink:title="Abdomen upper right quadrant"  class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                  style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163,240.84v49.49H109.54v-35.2S132,241.25,163,240.84Z" ></path>
+              </a>
+
+              <a id="lnkRAntLowerLeg"  xlink:title="Anterior lower leg (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                  style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M146.13,521.78s0-.19,0-.54H112.85c-.06.19-.13.35-.19.54-3.68,10.72-5.85,38.05,15.22,104.76a46,46,0,0,1,1.38,16.13h19.67c-1.08-14.23-1.36-30.95,1.56-42.65C150.49,600,159.17,558.73,146.13,521.78Z"></path>
+              </a>
+
+              <a id="lnkRAntAnkle"  xlink:title="Anterior ankle (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                   style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M129.18,642s-1.83,12.51-5.22,19.75h27c-.67-5-1.51-12-2.1-19.75Z"></path>
+              </a>
+
+              <a id="lnkRFootTop"  xlink:title="Right Foot (top)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover"
+                   style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M151.82,669.82s-.52-3.07-1.19-8h-27a67.61,67.61,0,0,1-15.29,20.63s-6.09,7,3,8.26H147S159.21,687.21,151.82,669.82Z"></path>
+              </a>
+
+              <a id="lnkRAntKnee"  xlink:title="Anterior knee (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M151,478.29H112.66q2.3,5.67,5,11.23s2.61,16.51-.87,25.21c0,0-2.13,1.31-3.91,6.51H146.4s-.87-30.42,3-39.11C149.44,482.13,150.07,480.71,151,478.29Z"></path>
+              </a>
+
+              <a id="lnkRAntUpperLeg"  xlink:title="Anterior upper leg (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M161.61,379.75c-41,.37-65.69-10.83-65.73-10.85-1.8,33,1.07,72.26,16.42,109.39h38.29c2.25-6.22,6.2-19.12,5.9-32.25v-59.1S156.12,381,161.61,379.75Z"></path>
+              </a>
+
+              <a id="lnkLAntLowerleg"  xlink:title="Anterior lower leg (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M175.45,600c2.92,11.7,2.63,28.42,1.55,42.65h19.67a46.12,46.12,0,0,1,1.39-16.13c21.07-66.71,18.89-94,15.21-104.76l-.18-.54H179.82c0,.35,0,.54,0,.54C166.76,558.73,175.45,600,175.45,600Z"></path>
+              </a>
+
+              <a id="lnkLAntAnkle"  xlink:title="Anterior ankle (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M177.09,642c-.6,7.73-1.44,14.71-2.1,19.75h27c-3.4-7.24-5.22-19.75-5.22-19.75Z"></path>
+              </a>
+
+              <a id="lnkLFootTop"  xlink:title="Left Foot (top)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M178.9,690.68h35.64c9.13-1.31,3.05-8.26,3.05-8.26a67.45,67.45,0,0,1-15.29-20.63h-27c-.67,5-1.19,8-1.19,8C166.72,687.21,178.9,690.68,178.9,690.68Z"></path>
+              </a>
+
+              <a id="lnkLAntKnee"  xlink:title="Anterior knee (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M176.49,482.13c3.91,8.69,3,39.11,3,39.11H213c-1.78-5.2-3.91-6.51-3.91-6.51-3.49-8.7-.87-25.21-.87-25.21q2.73-5.56,5.05-11.23H175C175.87,480.71,176.49,482.13,176.49,482.13Z"></path>
+              </a>
+
+              <a id="lnkLAntUpperLeg"  xlink:title="Anterior upper leg (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M164.33,379.75c40.95.37,65.69-10.83,65.73-10.85,1.8,33-1.08,72.26-16.42,109.39h-38.3c-2.24-6.22-6.2-19.12-5.89-32.25l0-59.1S169.81,381,164.33,379.75Z"></path>
+              </a>
+
+              <a id="lnkChest"  xlink:title="Chest/ribs"  class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M227.77,128h-38.4V113.45H136.63v14.3H100s-.65.07-1.74.28v86.66l11.31,28.69v11.74s52.14-32.17,106.92,0V243.38l11.31-28.69V128Z"></path>
+              </a>
+
+              <a id="lnkForehead" xlink:title="forehead"  class="frontBodyClass">
+                  <path id="" class="body-part fill-hover forehead" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M150.51,29.41S157.23,32.34,163,32c0,0,4.14,2.55,14.89-2.63,0,0,10.5-.78,11.42,22.51l4.12-1.62c1.29-2.29,0-26.08,0-26.08C191.47,5.93,163,7.35,163,7.35s-28.47-1.42-30.43,16.84c0,0-1,17.83-.39,24.1a6.27,6.27,0,0,0,.39,2l3.27,1.62S135.51,28.43,150.51,29.41Z"></path>
+              </a>
+
+              <a id="lnkLTMJ" xlink:title="TMJ (Left)"  class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M189.37,79.9A32.18,32.18,0,0,1,183.16,93c-4.06,4.89-10.36,8.7-20.16,8.81V79.9Z"></path>
+              </a>
+
+              <a id="lnkRFace" xlink:title="Face (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163,32c-5.77.33-12.49-2.6-12.49-2.6-15-1-14.67,22.48-14.67,22.48l-3.27-1.62S125.41,49,127,57.45a14.62,14.62,0,0,0,8.48,13.69,39.88,39.88,0,0,0,1.12,8.76H163Z"></path>
+              </a>
+
+              <a id="lnkRTMJ" xlink:title="TMJ (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163,79.9v21.88c-9.8-.11-16.1-3.92-20.16-8.81a32.18,32.18,0,0,1-6.21-13.07Z"></path>
+              </a>
+
+              <a id="lnkLFace" xlink:title="Face (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M177.89,29.38C167.14,34.56,163,32,163,32V79.9h26.37a39.88,39.88,0,0,0,1.12-8.76A14.62,14.62,0,0,0,199,57.45c1.62-8.48-5.54-7.18-5.54-7.18l-4.12,1.62C188.39,28.6,177.89,29.38,177.89,29.38Z"></path>
+              </a>
+
+              <a id="lnkLRHand"  xlink:title="Right Hand (palm)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M61.87,346.37a22.32,22.32,0,0,1,.09,8.29c-.54,3.34-1.22,14.69-1.34,20.28,0,0-.35,12.82-3.06,15.67-1.14,1.2-4,1.28-4.43-1.13-.88-4.7.23-12.28.2-14-.08-3.12-.32-7.1-.32-7.1s-.79,3.69-1.73,11.15c-.22,1.69-2.17,13.31-3.61,17.08-1.13,2.88-5.49,2.35-5.75-.73-.31-3.77,1.7-16.69,1.7-16.69,0-4.52.84-7.6.81-11.94-.67,4.21-2.91,12.49-2.91,12.49a90.21,90.21,0,0,1-5.6,20.39c-1.37,3-6.33,1.76-5.93-1.08.62-4.41,2.94-15.69,3.61-19.72.33-2.08,2.61-12.23,2.78-13.1-.68,1.92-3.23,9.68-3.64,11.12A80.86,80.86,0,0,1,25.67,393c-1.6,2.68-6.07,1.48-5.48-1.91,1-5.66,5.18-16,5.81-18.28,2.47-8.71,5.09-13.57,5.74-16.72a1.72,1.72,0,0,0-2.24-2c-1.5.53-3.88,2-7.51,5.51s-6.59,3.94-8.48,2.25c-2.61-2.34,5.45-9.22,9-13.47,4.31-5.17,12.09-6.18,16-10.7Z"></path>
+              </a>
+
+              <a id="lnkRAntWrist"  xlink:title="Anterior wrist (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M62,346.37h0a64.47,64.47,0,0,0-2-6.49l4.35-8.69-20.06-6.64-.81,9.25-4.84,3.81Z"></path>
+              </a>
+
+              <a id="lnkRUpperArm"  xlink:title="Anterior upper arm (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M62.59,187.74v12.17l-6.12,34L95.06,241c1.49-9.21,2.7-18.44,3.17-26.34V187.74Z"></path>
+              </a>
+
+              <a id="lnkRShoulder"  xlink:title="Anterior shoulder (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M98.23,128c-6.83,1.31-31.89,8.23-35.64,39.72v20H98.23Z"></path>
+              </a>
+
+              <a id="lnkRElbow"  xlink:title="Anterior elbow (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M56.47,233.89l-1.7,9.49A84,84,0,0,0,49,262.55l40.4,8.19c1.81-8.55,3.91-19.12,5.63-29.71Z"></path>
+              </a>
+
+              <a id="lnkRForearm"  xlink:title="Anterior forearm (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M47.81,284.25l-3.54,40.3,20.06,6.64,20.86-41.73s1.89-7.68,4.24-18.72L49,262.55A85.57,85.57,0,0,0,47.81,284.25Z"></path>
+              </a>
+
+              <a id="lnkLHand"  xlink:title="Left Hand (palm)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M264.13,346.37a22.32,22.32,0,0,0-.09,8.29c.54,3.34,1.22,14.69,1.34,20.28,0,0,.35,12.82,3.06,15.67,1.14,1.2,4,1.28,4.43-1.13.88-4.7-.23-12.28-.2-14,.08-3.12.32-7.1.32-7.1s.79,3.69,1.73,11.15c.22,1.69,2.17,13.31,3.61,17.08,1.13,2.88,5.49,2.35,5.75-.73.31-3.77-1.7-16.69-1.7-16.69,0-4.52-.84-7.6-.81-11.94.67,4.21,2.91,12.49,2.91,12.49a90.21,90.21,0,0,0,5.6,20.39c1.37,3,6.33,1.76,5.93-1.08-.62-4.41-2.94-15.69-3.61-19.72-.33-2.08-2.61-12.23-2.78-13.1.68,1.92,3.23,9.68,3.64,11.12A80.86,80.86,0,0,0,300.33,393c1.6,2.68,6.07,1.48,5.48-1.91-1-5.66-5.18-16-5.81-18.28-2.47-8.71-5.09-13.57-5.74-16.72a1.72,1.72,0,0,1,2.24-2c1.5.53,3.88,2,7.51,5.51s6.59,3.94,8.48,2.25c2.61-2.34-5.45-9.22-9-13.47-4.31-5.17-12.09-6.18-16-10.7Z"></path>
+              </a>
+
+              <a id="lnkLAntWrist"  xlink:title="Anterior wrist (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M264.05,346.37h0a64.47,64.47,0,0,1,2-6.49l-4.35-8.69,20.06-6.64.81,9.25,4.84,3.81Z"></path>
+              </a>
+
+              <a id="lnkLUpperArm"  xlink:title="Anterior upper arm (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M263.41,187.74v12.17l6.12,34L230.94,241c-1.49-9.21-2.7-18.44-3.17-26.34V187.74Z"></path>
+              </a>
+
+              <a id="lnkLShoulder"  xlink:title="Anterior shoulder (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M227.77,128c6.83,1.31,31.89,8.23,35.64,39.72v20H227.77Z"></path>
+              </a>
+
+              <a id="lnkLElbow"  xlink:title="Anterior elbow (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M269.53,233.89l1.7,9.49A84,84,0,0,1,277,262.55l-40.4,8.19c-1.81-8.55-3.91-19.12-5.63-29.71Z"></path>
+              </a>
+
+              <a id="lnkLForearm"  xlink:title="Anterior forearm (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M278.19,284.25l3.54,40.3-20.06,6.64-20.86-41.73s-1.89-7.68-4.24-18.72l40.4-8.19A85.57,85.57,0,0,1,278.19,284.25Z"></path>
+              </a>
+
+              <a id="lnkLAntHip" xlink:title="Anterior hip (Left)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M230.12,369a251.63,251.63,0,0,1-28.78,7l-3.69-42.92-.83-9.79c9.8,2.16,20.07,4.25,29.32,7.9C227.81,341.71,229.41,356.07,230.12,369Z"></path>
+              </a>
+
+              <a id="lnkAntPelvis" xlink:title="Anterior pelvis" class="frontBodyClass" >
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M201.51,375.8a232.86,232.86,0,0,1-37.07,3.81,14.81,14.81,0,0,0-2.66,0,203.85,203.85,0,0,1-37.29-3l4.09-45,.79-8.61c18-3.46,42.34-5.56,67.63,0l.83,9.8Z"></path>
+              </a>
+
+              <a id="lnkRAntHip" xlink:title="Anterior hip (Right)" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M129.2,322.86l-.79,8.61-4.1,45c-18.18-3.21-28.4-7.85-28.43-7.87A348.45,348.45,0,0,1,100,331,165.66,165.66,0,0,1,129.2,322.86Z"></path>
+              </a>
+
+              <a id="lnkAntLRquadrant" xlink:title="Abdomen lower right quadrant"  class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163,290.33v29.34H163A185.59,185.59,0,0,0,99.86,331.2c4.12-24.85,9.49-40.87,9.49-40.87Z"></path>
+              </a>
+
+              <a id="lnkAntLLquadrant"  xlink:title="Abdomen lower left quadrant" class="frontBodyClass">
+                  <path id="" class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163,290.33v29.34h.05a185.59,185.59,0,0,1,63.09,11.53c-4.12-24.85-9.49-40.87-9.49-40.87Z"></path>
+              </a>
+
+              <path id="" class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M118.61,499.77s5.68,18.66,15.1,18.66c0,0,7.93-3,13-18.66"></path>
+              <path id="" class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M178.79,493.56s6.76,22.3,15.34,24.87c0,0,8.34-.88,13.17-15"></path>
+              <path class="body-part2 no-fill-stroke" style=" fill: #0f6496 !important;" d="M205.1,691l.14-.84a13.79,13.79,0,0,0,.23-3.12,3.33,3.33,0,0,1,.54-.95,3.17,3.17,0,0,1,2.54-1,.81.81,0,0,1,.54.28c.41.41,1.07,1.59.92,5a1.13,1.13,0,0,0,0,.14l1,0v-.1c0-.6.33-4.06,2.38-5,1.4-.68,3.38-.09,5.89,1.76l.59-.8c-2.83-2.09-5.16-2.72-6.92-1.86a4.66,4.66,0,0,0-2.12,2.39,4.14,4.14,0,0,0-1.09-2.27,1.64,1.64,0,0,0-1.23-.49,4,4,0,0,0-3.26,1.34l0,0a3,3,0,0,0-.68-1.18,2,2,0,0,0-1.61-.64,4.55,4.55,0,0,0-3.65,1.68.27.27,0,0,0-.07.08,4.37,4.37,0,0,0-1.26-2.05,3.89,3.89,0,0,0-3.4-.78,4.11,4.11,0,0,0-3.17,1.64l-.18.28a6.9,6.9,0,0,0-1.67-2.89,5.05,5.05,0,0,0-3.71-1.5c-2.64-.09-4.67.66-6,2.24-2.57,3.1-1.46,8.19-1.41,8.41l1-.22c0-.05-1-4.83,1.21-7.55,1.1-1.33,2.85-1.95,5.24-1.88a4.1,4.1,0,0,1,3,1.23,6.7,6.7,0,0,1,1.72,3.84,10.57,10.57,0,0,0,.12,4.09l.17.7h.75l.06-.78a19,19,0,0,0-.08-4,3.88,3.88,0,0,1,.61-1.41,3.2,3.2,0,0,1,2.54-1.25,3,3,0,0,1,2.57.56,4.29,4.29,0,0,1,1.2,2.77,8.63,8.63,0,0,0-.11,3.87l0,.21h.9l0-.25a16.31,16.31,0,0,0,.15-3.74,3.25,3.25,0,0,1,.55-1,3.68,3.68,0,0,1,2.95-1.3,1.05,1.05,0,0,1,.8.35,2.92,2.92,0,0,1,.66,1.89,7.54,7.54,0,0,0-.2,3.25l.15.84Z"></path>
+              <path class="body-part2 no-fill-stroke" style=" fill: #0f6496 !important;" d="M122.56,691l.34-1.84a7.28,7.28,0,0,0-.21-3.25,3,3,0,0,1,.64-1.84,1.15,1.15,0,0,1,1-.39,3.8,3.8,0,0,1,3.07,1.35,3.27,3.27,0,0,1,.53,1,16.25,16.25,0,0,0,.15,3.73l.19,1.25h.52l.28-1.21a8.38,8.38,0,0,0-.12-3.87,4.31,4.31,0,0,1,1.19-2.72,3.3,3.3,0,0,1,2.77-.61,4.42,4.42,0,0,1,3,2.09,3.47,3.47,0,0,1,.28.63,18.48,18.48,0,0,0-.08,3.91l.14,1.78h.27l.56-1.66a7.46,7.46,0,0,0,.13-4.11,6.76,6.76,0,0,1,1.72-3.78,4.42,4.42,0,0,1,3.27-1.31c2.49-.08,4.33.58,5.48,2,2.24,2.72,1.19,7.4,1.18,7.45l1,.22c.05-.21,1.18-5.2-1.37-8.3-1.36-1.65-3.47-2.45-6.24-2.35a5.42,5.42,0,0,0-4,1.58,6.91,6.91,0,0,0-1.72,3,5.57,5.57,0,0,0-3.34-2.14,4.25,4.25,0,0,0-3.68.83,4.36,4.36,0,0,0-1.25,2l0-.05a4.76,4.76,0,0,0-3.79-1.74,2.18,2.18,0,0,0-1.74.67,3.16,3.16,0,0,0-.68,1.18v0a4.26,4.26,0,0,0-3.48-1.39h0c-.12,0-2.25.5-3.1,3.66a4.56,4.56,0,0,0-2-2.46c-1.74-.91-4.11-.32-7.07,1.77l.58.82c2.62-1.86,4.65-2.43,6-1.71,1.72.9,2.08,3.64,2.16,4.78,0,.18,0,.36,0,.55l1,0s0-.26,0-.61c-.09-4.82,2.23-5.68,2.59-5.78a3.21,3.21,0,0,1,2.59,1,3,3,0,0,1,.52.89,13.86,13.86,0,0,0,.24,3.12l.32,1.84Z"></path>
+              <path class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M109.35,290.33s20.54,17,22.45,25"></path>
+              <path class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M217.5,293.06s-18.64,10.8-20.07,22.23"></path>
+              <line class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="94.61" y1="243.71" x2="84.57" y2="252.32"></line>
+              <line class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="54.77" y1="243.38" x2="62.3" y2="249.5"></line>
+              <line class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="62.59" y1="199.91" x2="72.04" y2="207.86"></line>
+              <line class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="231.39" y1="243.71" x2="245.59" y2="255.12"></line>
+              <line class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="271.23" y1="243.38" x2="266.86" y2="249.5"></line>
+              <line class="body-part no-fill-stroke"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="263.41" y1="199.91" x2="259.15" y2="207.86"></line>
+
+              <text x="40" y="98%" fill="#0f6496" style="font-family: verdana; font-size: 16px; font-weight: bold;color:#0f6496" >RIGHT</text>
+
+              <text x="230" y="98%" fill="#0f6496" style="font-family: verdana; font-size: 16px; font-weight: bold;color:#0f6496" >LEFT</text>
+          </svg>
+      </div>
+
+      <!-- <div id="divBackBody" style="display: inline-block; width: 250px;" > -->
+      <div id="divBackBody" style="display: inline-block; width: 250px;" >
+        <p style="margin: 0; text-align: center; font-size: 9px; font-family: verdana; font-weight: 600; color: #0f6496;" >BACK</p>
+          <svg id="back-body" data-name="back-body" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 700">
+              <defs>
+                  <style>
+                      /* .body-part fill-hover {
+                          fill: none;
+                          stroke: #0f6496;
+                          stroke-miterlimit: 10;
+                      }*/
+                      .body-part {
+                          fill: none;
+                          stroke: #0f6496;
+                          stroke-miterlimit: 10;
+                      }
+
+                      .body-part2 {
+                          fill: #0f6496;
+                      }
+
+                      .fill-hover {
+                          fill: #0f6496 !important;
+                          fill-opacity: 0;
+                          stroke: rgb(15, 100, 150);
+                          stroke-opacity: 1;
+                          cursor: pointer;
+                      }
+
+                          .fill-hover:hover {
+                              fill-opacity: .4;
+                          }
+                          .selected{
+                            fill: #0f6496 !important;
+                          }
+                  </style>
+              </defs>
+
+              <a id=""  xlink:title="">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M161.14,380.91l3.63,0a10.48,10.48,0,0,0-1.77-.13A9.53,9.53,0,0,0,161.14,380.91Z"></path>
+              </a>
+
+              <a id="lnkMPostCervical"  xlink:title="Posterior cervical" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163.78,127.42a59.6,59.6,0,0,0,13.53-1.81l-.36-.2-5.13-35.55a30.49,30.49,0,0,1-17.38.09l-4.5,36-.32.17a65.83,65.83,0,0,0,14.16,1.26"></path>
+              </a>
+
+              <a id="lnkLPostElbow"  xlink:title="Posterior elbow (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M56.18,244.05S52,248.3,49.59,257.44l41,9.44c1-5.57,2.12-12.52,3.26-21.17l-36.71-9.6Z"></path>
+              </a>
+
+              <a id="lnkLPostForeArm"  xlink:title="Posterior forearm (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M48,271.49l-3.93,55.69,19.31,7.61,20.55-45.34s2.78-1.32,6.68-22.57l-41-9.44A52.27,52.27,0,0,0,48,271.49Z"></path>
+              </a>
+
+              <a id="lnkRPostCervical"  xlink:title="Posterior cervical (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M192.34,119.56a60,60,0,0,1-15,6.06l-.35-.21-5.13-35.54c11.45-3.59,17.35-13.61,19-16.84.07,4.25-.38,16.57-7.9,21.4C182.92,94.43,180,109.54,192.34,119.56Z"></path>
+              </a>
+
+              <a id="lnkRPostTrapezius"  xlink:title="Posterior trapezius (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M228.37,129.57A226.09,226.09,0,0,0,225,153.06L177.31,125.6a59.6,59.6,0,0,0,15-6c4.1,3.32,9.87,6.08,18,7.55A61.4,61.4,0,0,1,228.37,129.57Z"></path>
+              </a>
+
+              <a id="lnkRFootPlantar"  xlink:title="Right Foot (plantar)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M173.56,673.71c-5.67,19.61,6.53,19,6.53,19l31.8,0c18.08.44-7.41-23.29-7.41-23.29a50.46,50.46,0,0,1-2.58-5H175.19C174.33,669.32,173.56,673.71,173.56,673.71Z"></path>
+              </a>
+
+              <a id="lnkLUpperThoracic"  xlink:title="Upper thoracic (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M149.62,126.16,100.06,153c.41,5.62.64,11,.72,16.08h63V127.42A65.83,65.83,0,0,1,149.62,126.16Z"></path>
+              </a>
+
+              <a id="lnkRUpperThoracic"  xlink:title="Upper thoracic (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M177.31,125.61a59.6,59.6,0,0,1-13.53,1.81v41.66h60.28c.1-5.07.38-10.43.89-16Z"></path>
+              </a>
+
+              <a id="lnkLPostWrist"  xlink:title="Posterior wrist (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M43.44,336.17c-1.94.86-3.65,1.68-5.22,2.47l23.12,11A45.15,45.15,0,0,0,60,342.27l3.4-7.48-19.31-7.61Z"></path>
+              </a>
+
+              <a id="lnkLFootPlantar"  xlink:title="Left Foot (plantar)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M121.52,669.37S96,693.1,114.11,692.66l31.8,0s12.2.64,6.53-19c0,0-.77-4.39-1.63-9.34H124.1A50.46,50.46,0,0,1,121.52,669.37Z"></path>
+              </a>
+
+              <a id="lnkRPostLowerLeg"  xlink:title="Posterior lower leg (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M176.83,610.13l.17,34.45h20.19a77.15,77.15,0,0,1,4.68-30.75c22.66-47.7,15-77.09,15-77.09-.43-1.17-.83-2.34-1.21-3.52H176.33C168.09,564.61,176.83,610.13,176.83,610.13Z"></path>
+              </a>
+
+              <a id="lnkRPostKnee"  xlink:title="Posterior knee (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M177.7,486.44c6.75,10.44,2.18,36.58,2.18,36.58a63.42,63.42,0,0,0-3.55,10.2h39.36c-5.54-17.16-5.21-34.75-2.9-49.53h-36C177.34,485.41,177.7,486.44,177.7,486.44Z"></path>
+              </a>
+
+              <a id="lnkRPostAnkle"  xlink:title="Posterior ankle (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M177,653.68c-.47,2.74-1.19,6.88-1.85,10.69H201.9a56.6,56.6,0,0,1-4.71-19.79H177Z"></path>
+              </a>
+
+              <a id="lnkLPostKnee"  xlink:title="Posterior knee (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M110.31,533.22h39.36a63.42,63.42,0,0,0-3.55-10.2s-4.57-26.14,2.18-36.58c0,0,.36-1,.92-2.75h-36C115.52,498.47,115.85,516.06,110.31,533.22Z"></path>
+              </a>
+
+              <a id="lnkLPostAnkle"  xlink:title="Posterior ankle (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M124.1,664.37h26.71c-.66-3.81-1.38-8-1.85-10.69l0-9.1H128.81A56.6,56.6,0,0,1,124.1,664.37Z"></path>
+              </a>
+
+              <a id="lnkLPostHand"  xlink:title="Posterior hand (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M22.51,350.81c-3.54,4.25-11.62,11.14-9,13.49,1.89,1.69,5,1.14,8.5-2.26s6-5,7.53-5.52a1.73,1.73,0,0,1,2.24,2c-.66,3.16-3.28,8-5.75,16.76-.64,2.3-4.82,12.63-5.82,18.3-.6,3.4,3.88,4.61,5.48,1.92a80.32,80.32,0,0,0,7.09-15.64c.41-1.44,3-9.22,3.65-11.14-.17.87-2.46,11-2.79,13.13-.67,4-3,15.33-3.62,19.75-.39,2.85,4.58,4.09,5.95,1.08a90.68,90.68,0,0,0,5.61-20.42s2.24-8.3,2.91-12.52c0,4.35-.82,7.44-.81,12,0,0-2,12.94-1.7,16.72.25,3.08,4.63,3.61,5.76.73,1.45-3.78,3.4-15.42,3.61-17.12.95-7.47,1.74-11.17,1.74-11.17s.24,4,.32,7.12c0,1.68-1.08,9.27-.2,14,.46,2.41,3.29,2.33,4.44,1.13,2.71-2.85,3.06-15.71,3.06-15.71.12-5.59.75-14,1-17.34a60.54,60.54,0,0,0-.38-10.37l-23.12-11C29.53,343,26.17,346.41,22.51,350.81Z"></path>
+              </a>
+
+              <a id="lnkLPostLowerLeg"  xlink:title="Posterior lower leg (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M109.1,536.74s-7.63,29.39,15,77.09a77.15,77.15,0,0,1,4.68,30.75H149l.17-34.45s8.74-45.52.5-76.91H110.31C109.93,534.4,109.53,535.57,109.1,536.74Z"></path>
+              </a>
+
+              <a id="lnkRPostShoulder"  xlink:title="Posterior shoulder (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M225,153.06c-.51,5.59-.79,10.95-.89,16h39.16c-.25-3.26-.58-5.4-.58-5.4-5.87-21.61-21.59-30.48-34.27-34.11A221.2,221.2,0,0,0,225,153.06"></path>
+              </a>
+
+              <a id="lnkSacrum"  xlink:title="Sacrum" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M202.39,383.2l.13-45.3a247.53,247.53,0,0,0-38.74-2.61v0a298.15,298.15,0,0,0-36.58,2.63l-2.34,45.27a337.89,337.89,0,0,1,36.28-2.28,9.53,9.53,0,0,1,1.86-.15,10.48,10.48,0,0,1,1.77.13A314.22,314.22,0,0,1,202.39,383.2Z"></path>
+              </a>
+
+              <a id="lnkRPostHip"  xlink:title="Posterior hip (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M231.85,388.45,202.4,383.2l.12-45.3a198.51,198.51,0,0,1,25.61,5.56A326.58,326.58,0,0,1,231.85,388.45Z"></path>
+              </a>
+
+              <a id="lnkRPostUpperLeg"  xlink:title="Posterior upper leg (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M223.43,447.23a145.44,145.44,0,0,0-10.63,36.46h-36c-2.35-7.21-8.32-26.63-6.92-33.84l-.67-62.73s.81-5.35-4.41-6.22a311.9,311.9,0,0,1,37.61,2.3,270.13,270.13,0,0,1,29.45,5.25C232,408.66,229.86,429.27,223.43,447.23Z"></path>
+              </a>
+
+              <a id="lnkLPostHip"  xlink:title="Posterior hip (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M127.18,337.93l-2.33,45.26a254.86,254.86,0,0,0-30.56,5.23.45.45,0,0,0-.14,0,326.58,326.58,0,0,1,3.72-45A239.87,239.87,0,0,1,127.18,337.93Z"></path>
+              </a>
+
+              <a id="lnkLPostUpperLeg"  xlink:title="Posterior upper leg (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M156.8,387.12l-.67,62.73c1.41,7.21-4.56,26.63-6.92,33.84h-36a144.69,144.69,0,0,0-10.64-36.46c-6.42-18-8.58-38.55-8.4-58.78l.14,0,30.55-5.23a340.91,340.91,0,0,1,36.28-2.27C156,381.83,156.8,387.12,156.8,387.12Z"></path>
+              </a>
+
+              <a id="lnkRLumbar"  xlink:title="Lumbar (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M202.52,337.9a198.73,198.73,0,0,1,25.6,5.56,393.71,393.71,0,0,0-11.22-52l-1-36.27a59.75,59.75,0,0,1,.88-8.48h-53v88.62a247.53,247.53,0,0,1,38.74,2.61"></path>
+              </a>
+
+              <a id="lnkLLumbar"  xlink:title="Lumbar (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M127.2,337.92a298.15,298.15,0,0,1,36.58-2.63V246.67H109.21a59.75,59.75,0,0,1,.88,8.48l-1,36.27a393.71,393.71,0,0,0-11.22,52,243.21,243.21,0,0,1,29.32-5.54"></path>
+              </a>
+
+              <a id="lnkRPostElbow"  xlink:title="Posterior elbow (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M269.82,244.05l-1-7.83-36.72,9.55c1.15,8.65,2.25,15.59,3.27,21.16l41-9.45C274,248.31,269.82,244.05,269.82,244.05Z"></path>
+              </a>
+
+              <a id="lnkRPostForeArm"  xlink:title="Posterior forearm (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M278,271.49a52.09,52.09,0,0,0-1.57-14l-41,9.45c3.89,21.2,6.67,22.52,6.67,22.52l20.25,44.67,19.52-8.33Z"></path>
+              </a>
+
+              <a id="lnkLPostShoulder"  xlink:title="Posterior shoulder (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M100.79,169.08h-38c.25-3.26.58-5.4.58-5.4,5.83-21.44,21.36-30.35,34-34,1.29,8.11,2.16,15.93,2.71,23.34C100.47,158.61,100.7,164,100.79,169.08Z"></path>
+              </a>
+
+              <a id="lnkLPostCervical"  xlink:title="Posterior cervical (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M154.44,90l-4.51,36-.32.16a63,63,0,0,1-17-5.79c13.57-10,10.46-25.93,10.46-25.93-7.52-4.83-8-17.17-7.9-21.4C136.83,76.29,142.81,86.43,154.44,90Z"></path>
+              </a>
+
+              <a id="lnkLPostTrapezius"  xlink:title="Posterior trapezius (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M149.63,126.15,100.07,153c-.55-7.41-1.42-15.23-2.71-23.34a62,62,0,0,1,18.28-2.56c7.47-1.34,13-3.78,17-6.74A63.29,63.29,0,0,0,149.63,126.15Z"></path>
+              </a>
+
+              <a id="lnkRPostWrist"  xlink:title="Posterior wrist (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M282.56,336.17l-.73-10.38-19.52,8.33,3.7,8.15a37.49,37.49,0,0,0-1.09,5.34l22.68-9.06C286.09,337.79,284.43,337,282.56,336.17Z"></path>
+              </a>
+
+              <a id="lnkPostUpperArm"  xlink:title="Posterior upper arm (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M100.78,169.08h-38a76,76,0,0,0,.58,18.13s1.53,18.94-.87,24.83l-4.36,16.33-1,7.74,36.71,9.6c1-7.64,2.06-16.61,3.13-27.15C97,218.56,101.26,198.65,100.78,169.08Z"></path>
+              </a>
+
+              <a id="lnkLMidThoracic"  xlink:title="Mid-thoracic (Left)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163.78,169.08h-63c.48,29.57-3.77,49.48-3.77,49.48a66,66,0,0,1,12.2,28.11h54.57Z"></path>
+              </a>
+
+              <a id="lnkRPostUpperArm"  xlink:title="Posterior upper arm (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M224.06,169.08h39.17a75.47,75.47,0,0,1-.58,18.13s-1.52,18.94.87,24.83l4.36,16.33,1,7.74-36.71,9.6c-1-7.64-2.06-16.61-3.12-27.15C229,218.56,223.58,198.65,224.06,169.08Z"></path>
+              </a>
+
+              <a id="lnkRMidThoracic"  xlink:title="Mid-thoracic (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M163.78,169.08h60.28c-.48,29.57,4.95,49.48,4.95,49.48a66,66,0,0,0-12.2,28.11h-53Z"></path>
+              </a>
+
+              <a id="lnkRPostHand"  xlink:title="Posterior hand (Right)" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M303.49,350.81c-3.68-4.43-7.06-7.84-15.89-12.26l-22.68,9.06a65.21,65.21,0,0,0-.64,12.44c.26,3.38.89,11.75,1,17.34,0,0,.35,12.86,3.06,15.71,1.15,1.2,4,1.28,4.44-1.13.88-4.71-.23-12.3-.2-14,.08-3.13.32-7.12.32-7.12s.79,3.7,1.74,11.17c.21,1.7,2.16,13.34,3.61,17.12,1.13,2.88,5.51,2.35,5.76-.73.31-3.78-1.7-16.72-1.7-16.72,0-4.53-.84-7.62-.81-12,.67,4.22,2.91,12.52,2.91,12.52A90.68,90.68,0,0,0,290,402.68c1.37,3,6.34,1.77,6-1.08-.63-4.42-3-15.71-3.62-19.75-.33-2.09-2.62-12.26-2.79-13.13.69,1.92,3.24,9.7,3.65,11.14a80.32,80.32,0,0,0,7.09,15.64c1.6,2.69,6.08,1.48,5.48-1.92-1-5.67-5.18-16-5.82-18.3-2.47-8.74-5.09-13.6-5.75-16.76a1.73,1.73,0,0,1,2.24-2c1.51.54,3.89,2,7.53,5.52s6.61,3.95,8.5,2.26C315.11,362,307,355.06,303.49,350.81Z"></path>
+              </a>
+
+              <a id="lnkPostHead"  xlink:title="Posterior head" class="BackBodyClass">
+                  <path class="body-part fill-hover" style="fill: none !important;stroke: #0f6496 !important;stroke-miterlimit: 10 !important;fill: #0f6496 !important;fill-opacity: 0;stroke: rgb(15, 100, 150);stroke-opacity: 1;cursor: pointer;" d="M200.14,56s-.77,13.17-8.83,16c0,0-.17.38-.49,1-1.65,3.23-7.55,13.24-19,16.83a30.49,30.49,0,0,1-17.38.09C142.82,86.43,136.84,76.29,135.18,73c-.32-.64-.49-1-.49-1-8.06-2.84-8.83-16-8.83-16-.53-5.44,6.76-4.25,6.76-4.25-2.08-6.53,0-24.4,0-24.4C134.48,6.56,163,9.29,163,9.29s28.52-2.73,30.38,18.06c0,0,2.08,17.87,0,24.4C193.38,51.75,200.67,50.56,200.14,56Z"></path>
+              </a>
+
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M186.57,661h2s1.23,17.43,6.91,22c0,0,3.54,6.77-.25,9.67"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M182.57,661h-2.28s1.18,13.33-7.84,17.52"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M153.75,679.85C149.78,675.56,146,661,146,661h-6.29s-.14,14.29-8.92,21.14c0,0-4.5,8.22,2.35,10.54"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M147.15,488.6s-.86,7-7.15,9"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M140,511s7.66,12.28,9.67,22.22"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M123.43,511s-11.53,16.8-13.12,22.22"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M113.2,483.69s1.94,11.6,6.8,13.88"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M176.78,483.69s4.65,12.74,9.22,13.88"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M212.8,483.69s-1.94,10.45-7.94,11.88"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M203.14,511s7,7.89,10.52,14.8"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M186,511s-3.6,12.31-7.8,16.15"></path>
+              <polyline class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" points="155.43 299 163.69 306.43 172.29 299"></polyline>
+              <line class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" x1="163.69" y1="307.86" x2="163.69" y2="320.29"></line>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M119.71,282.43s-13.37,11.94-14.11,22"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M206.57,282.43s12.82,10,13.41,20.28"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M170.29,160.14v22.29s.85,10.86,8.28,14"></path>
+              <path class="body-part no-fill"  style=" fill: none;stroke: #0f6496;stroke-miterlimit: 10;" d="M157.71,160.14v21.43s-2.16,12.29-8.08,14.86"></path>
+
+              <text x="40" y="98%" fill="#0f6496" style="font-family: verdana; font-size: 16px; font-weight: bold;color:#0f6496" >LEFT</text>
+              <text x="230" y="98%" fill="#0f6496" style="font-family: verdana; font-size: 16px; font-weight: bold;color:#0f6496" >RIGHT</text>
+          </svg>
+      </div>
+  </div>
+</div>
+<div class="col-md-3 mt-1 p-1 border image-marker-container__box__contents list-scroll" id="table-scroll">
+  <div class="" *ngIf="ArrayListOfImagBack.length > 0" >
+      <div *ngFor="let data of ArrayListOfImagBack;" class="image-marker__text-box"  style="border-left:5px solid #0f6496;background:#bbe1ed">
+
+          <div class="d-flex">
+              <input type="text" #title1  class="border-0 form-control form-control-sm f-13 bold mb-0 pb-0 pr-5" style="background:#bbe1ed" value="{{data?.title}}">
+              <span class="close-style pointer f-14"  (click)="closeselectedpart(data,'Back')" style="margin-left: -20px;">{{data?.close}}</span>
+          </div>
+          <div class="shadow-div">
+            <p #description1 class="image-marker__text-box__content shdw f-14 border-0" data-placeholder="Insert description here...." style="background: #bbe1ed; border-radius: 4px; line-height: 18px;padding: 4px 10px;" contenteditable="true">{{data?.description}}
+            </p>
+            <!-- <input type="text"  #description1 class="image-marker__text-box__content shdw form-control form-control-sm f-13 border-0" placeholder="Insert description here...." style="min-height: 35px;background:#bbe1ed"
+             value="{{data?.description}}"> -->
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
